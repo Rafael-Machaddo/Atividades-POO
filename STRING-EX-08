@@ -1,0 +1,46 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Informe a palavra secreta: ");
+        String palavras = teclado.next();
+        System.out.println("Iniciando jogo da forca");
+        char[] traco = new char[palavras.length()];
+        for (int i = 0; i < palavras.length(); i++) {
+          traco[i] = '*';
+        }
+
+        int tamPalavra = palavras.length();
+        int tentativas = 3;
+
+        while(tamPalavra >0 && tentativas >0 ){
+            System.out.println();
+            for ( int i = 0; i < palavras.length(); i++) {
+              System.out.print(" " + traco[i] + " ");
+            }
+            System.out.println();
+
+            System.out.println("Você tem " +tentativas+ " chances de adivinhar");
+            System.out.println("Digite uma letra: ");
+
+            char letras = teclado.next().charAt(0);
+            boolean iscorrect = false;
+            for (int i = 0; i < traco.length; i++) {
+                if(palavras.charAt(i) == letras)
+                {
+                    traco[i] = letras;
+                    tamPalavra--;
+                    iscorrect = true;
+                }
+            }
+
+            if(!iscorrect)
+                tentativas--;
+        }
+
+        if(tamPalavra == 0)
+            System.out.println("PARABENS!Você VENCEU!!");
+        else System.out.println("Infelizmente Você Perdeu... ");
+	}
+}
