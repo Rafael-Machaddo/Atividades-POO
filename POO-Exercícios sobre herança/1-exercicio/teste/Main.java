@@ -10,7 +10,7 @@ bluetooth.bluetooth();
 
 public class Mouse {
 public void optico () {
-System.out.println("Óptico");
+System.out.println("optico");
 }
 
 public void wireless() {
