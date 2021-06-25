@@ -1,0 +1,5 @@
+superclasse:  É a classe existente a partir da qual as novas classes são derivadas.
+subclasse: É a nova classe que herda as propriedades e os métodos da Superclasse.
+classe: É uma descrição que abstrai um conjunto de objetos com características parecidas.
+atributos: São elementos que definem a estrutura de uma classe.
+metódos: determinam o comportamento dos objetos de uma classe e são semelhantes às funções ou procedimentos da programação estruturada.
