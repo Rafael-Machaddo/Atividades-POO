@@ -1,54 +1,122 @@
-// First - Fit algorithm
+package revisão.classeconcreta;
 
-class Main
+public class cliente
 {
+    public String nome;     
+    private String sobrenome;       
+    private int idade;      
 
-	static void firstFit(int blockSize[], int m,
-						int processSize[], int n)
-	{
-
-		int allocation[] = new int[n];
-	
-		for (int i = 0; i < allocation.length; i++)
-			allocation[i] = -1;
-	
-		for (int i = 0; i < n; i++)
-		{
-			for (int j = 0; j < m; j++)
-			{
-				if (blockSize[j] >= processSize[i])
-				{
-
-					allocation[i] = j;
-	
-
-					blockSize[j] -= processSize[i];
-	
-					break;
-				}
-			}
-		}
-	
-		System.out.println("\nN°\t Tamanho\t Bloco");
-		for (int i = 0; i < n; i++)
-		{
-			System.out.print(" " + (i+1) + "\t\t" +
-							processSize[i] + "\t\t");
-			if (allocation[i] != -1)
-				System.out.print(allocation[i] + 1);
-			else
-				System.out.print("Não Alocado :(");
-			System.out.println();
-		}
-	}
-	
-	public static void main(String[] args)
-	{
-		int blockSize[] = {100, 500, 200, 300, 600};
-		int processSize[] = {200, 400, 100, 400};
-		int m = blockSize.length;
-		int n = processSize.length;
-		
-		firstFit(blockSize, m, processSize, n);
-	}
+    
+    
+    
+    public final void setnome(String nome)
+    {
+        
+    }    
+    
+    
+    public final void setsobrenome(String sobrenome)
+    {
+        
+    }    
+    
+    
+    public final void setidade(int idade)
+    {
+        
+    }    
+    
+    
+    public final String getnome()
+    {
+        
+    }    
+    
+    
+    public final int getidade()
+    {
+        
+    }    
+    
+    
+    public final String getsobrenome()
+    {
+        
+    }    
 }
+
+package revisão.classeconcreta;
+
+class PJ
+{
+    private int cnpj;       
+    
+}
+
+package revisão.classeconcreta;
+
+class PF
+{
+    private int cpf;        
+    
+}
+
+package revisão.classeabstrata;
+
+class funcionario
+{
+    protected String CodFunc;       
+    protected String nome;      
+    protected String sobrenome;     
+    protected double salario;       
+
+    
+    
+    
+    public final String getnome()
+    {
+        
+    }    
+    
+    
+    public final String getsobrenome()
+    {
+        
+    }    
+    
+    
+    public final double getsalario()
+    {
+        
+    }    
+}
+
+package revisão.classeabstrata;
+
+class vendedor
+{
+    
+    
+    
+    public final double getsalario()
+    {
+        
+    }    
+}
+
+package revisão.interface;
+
+class CapaDura
+{
+    public String material;     
+    
+}
+
+package revisão.interface;
+
+class CapaMole
+{
+    public String material;     
+    
+}
+
